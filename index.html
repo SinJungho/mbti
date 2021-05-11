@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MBTI Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <!-- mbti별로 책 또는 여행지 추천해주기 -->
+    <article class="start">
+        <h1 class="mt-5 text-center">나랑 닮은 동물은?</h1>
+        <button type="button" class="btn btn-primary mt-5" onclick="start()">테스트 시작하기</button>
+    </article>
+    <!-- 질문 -->
+    <article class="qustion">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h2 id="title" class="text-center mt-5">문제</h2>
+        <input  type="hidden" id="type" value="EI">
+        <button type="button" id="A" class="btn btn-primary mt-5">1st btn</button>
+        <button type="button" id="B" class="btn btn-primary mt-5">2st btn</button>
+    </article>
+    <!-- 변수역할 -->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+    <!-- 자바스크립트 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+        var num = 1;
+        var q = {
+            1: {"title":"문제 1번", "type":"EI", "A":"E", "B":"I"},
+            2: {"title":"문제 2번", "type":"SN", "A":"S", "B":"N"},
+            3: {"title":"문제 3번", "type":"TF", "A":"T", "B":"F"},
+            4: {"title":"문제 4번", "type":"JP", "A":"J", "B":"P"},
+            5: {"title":"문제 5번", "type":"EI", "A":"E", "B":"I"},
+            6: {"title":"문제 6번", "type":"SN", "A":"S", "B":"N"},
+            7: {"title":"문제 7번", "type":"TF", "A":"T", "B":"F"},
+            8: {"title":"문제 8번", "type":"JP", "A":"J", "B":"P"},
+            9: {"title":"문제 9번", "type":"EI", "A":"E", "B":"I"},
+            10: {"title":"문제 10번", "type":"SN", "A":"S", "B":"N"},
+            11: {"title":"문제 11번", "type":"TF", "A":"T", "B":"F"},
+            12: {"title":"문제 12번", "type":"JP", "A":"J", "B":"P"}
+        }
+        function start(){
+            $(".start").hide();
+            $(".qustion").show();
+        }
+        $("#A").click(function(){
+            // console.log($("#type").val());
+            var type = $("#type").val();  //EI 값이 들어갈 것
+            var preValue = $("#"+type).val(); // "#EI"
+            $("#"+type).val(parseInt(preValue) + 1);
+            next();
+        });
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            $(".progress-bar").attr("style", "width: calc(100/12*"+num+"%");
+            $("#title").html(q[num]["title"]);
+            $("#type").val(q[num]["type"]);
+            $("#A").html(q [num]["A"]);
+            $("#B").html(q [num]["B"]);
+            num++;
+        }
+    </script>
+</body>
+</html>
