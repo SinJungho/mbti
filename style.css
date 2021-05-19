@@ -1,5 +1,31 @@
+@keyframes fontColorRainbow {
+    0% { 
+        color: #ff2a2a; 
+    }
+   15% { 
+       color: #ff7a2a; 
+    }
+   30% { 
+       color: #ffc52a 
+    }
+   45% { 
+       color: #43ff2a; }
+   60% { 
+       color: #2a89ff; 
+    }
+   75% { 
+       color: #202082; 
+    }
+   90% { 
+       color: #6b2aff; 
+    }
+   100% { 
+       color: #e82aff; 
+    }
+}
+
 body{
-    background-color: #1f1f1f;
+    background-color: #333;
     color: #fff;
     font-family: 'Nanum Myeongjo', serif;
 }
@@ -31,10 +57,17 @@ body{
 .btn-start{
     font-size: 16px;
     color: #fff;
+    background: none;
+    border: none;
 }
 
-.btn-start:hover{
-    
+.btn-start:hover, .btn-start::after{
+    animation-name: fontColorRainbow;
+    animation-duration: 3s; 
+    animation-iteration-count: infinit;
+    background: none;
+    transition: 0.5s;
+    transform: scale(1.4);
 }
 
 .question{
@@ -43,7 +76,7 @@ body{
 
 .question-content{
     font-size: 14px;
-    color: #ff9300;
+    color: #eee;
 
 }
 
