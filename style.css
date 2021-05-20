@@ -34,6 +34,7 @@ body{
     display: flex;
     flex-direction: column;
     background: url(img/background-frame.png) center no-repeat;
+    position: relative;
 }
 
 .main-title{
@@ -61,7 +62,7 @@ body{
     border: none;
 }
 
-.btn-start:hover, .btn-start::after{
+.btn-start:hover{
     animation-name: fontColorRainbow;
     animation-duration: 3s; 
     animation-iteration-count: infinit;
@@ -75,7 +76,7 @@ body{
 }
 
 .question-content{
-    font-size: 14px;
+    font-size: 19px;
     color: #eee;
 
 }
