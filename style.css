@@ -27,6 +27,7 @@
 
 body{
     background-color: #333;
+    background-image: url(img/big-frame.png);
     color: #fff;
     font-family: 'Nanum Myeongjo', serif;
 }
@@ -40,8 +41,8 @@ body{
 
 .main-title{
     font-size: 14px;
-    color: #7c7c7c;
-    margin-top: 170px;
+    color: #ebebeb;
+    margin-top: 230px;
 }
 
 .sub-title{
@@ -57,8 +58,8 @@ body{
 }
 
 .btn-start{
-    font-size: 16px;
-    color: #fff;
+    font-size: 26px;
+    color: #a57537;
     background: none;
     border: none;
 }
@@ -78,8 +79,7 @@ body{
 
 .question-content{
     font-size: 19px;
-    color: #eee;
-
+    color: #a57537;
 }
 
 article{
@@ -111,17 +111,24 @@ article{
     color: #fff;
 }
 
+btn-primary:hover {
+    color: #fff;
+    background-color: none;
+    border-color: none;
+}
+
 .btn-answer:hover{
-    background-color: #ff9300;
+    background-color: #a57537;
     border: 1px solid #1f1f1f;
     width: 288px;
     margin: 0 auto;
-    font-size: 13px;
+    transition: 0.2s;
+    font-size: 18px;
     color: #fff;
 }
 
 .progress-bar{
-    background-color: #ff9300;
+    background-color: #a57537;
 }
 
 .progress{
@@ -143,15 +150,25 @@ article{
     color: #ebebeb;
 }
 
+.result-book > strong{
+    margin-top: 20px;
+    font-size: 24px;
+    color: #a57537;
+}
+
 .result-explain{
     font-size: 16px;
     font-weight: 100;
-    color: #ff9300;
+    color: #a57537;
     margin-bottom: 30px;
 }
 
+.result-explain > #text{
+    margin-top: 10px;
+}
+
 .result-message{
-    color: #ff9300;
+    color: #a57537;
     margin: 0 auto;
     font-size: 24px;
     font-weight: 100;
