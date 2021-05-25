@@ -28,6 +28,7 @@
 body{
     background-color: #333;
     background-image: url(img/big-frame.png);
+    /* opacity: 0.5; */
     color: #fff;
     font-family: 'Nanum Myeongjo', serif;
 }
@@ -172,6 +173,15 @@ btn-primary:hover {
     margin: 0 auto;
     font-size: 24px;
     font-weight: 100;
+}
+
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
 }
 
 #img{

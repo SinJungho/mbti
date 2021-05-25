@@ -2,12 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>MBTI Test</title>
+    <title>Book MBTI</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
 </head>
 <body>
     <!-- <div class="img-cover"> -->
@@ -22,7 +23,6 @@
             <button type="button" class="btn-start btn-primary mt-5" onclick="start()">내 책 찾기</button>
         </div>
     </article>
-
     <!-- 질문 -->
     <article class="question">
         <div class="progress mt-5">
@@ -45,6 +45,16 @@
         <img class="updown-slash" src="img/down-frame.png" alt="down-slash" style="width: 300px; height: auto;">
         <h3 id="explain" class="result-explain text-center mt-5">book description</h3>
         <!-- <div class="mid-rectangle mt-4 mb-4"></div> -->
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="share addthis_inline_share_toolbox"></div>
+    </article>
+    <!-- 광고 -->
+    <article class="kakao_ad mt-5">
+        <ins class="kakao_ad_area" style="display:none;" 
+            data-ad-unit    = "DAN-RWCRyTnoe3ByBpK3" 
+            data-ad-width   = "320" 
+            data-ad-height  = "100"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
     </article>
     <!-- 변수역할 -->
     <input type="hidden" id="EI" value="0">
@@ -134,5 +144,6 @@
     </script>
     </div>
     <!-- </div> -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60ac89c08b213926"></script>
 </body>
 </html>
