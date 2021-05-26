@@ -34,6 +34,7 @@ body{
     
 }
 
+
 .container{
     max-width: 528px;
     /* max-height: 700px; */
@@ -48,7 +49,8 @@ ol > li{
     display: flex;
     flex-direction: column;
     background: url(img/background-frame.png) center no-repeat;
-    position: relative;
+    /* position: relative; */
+    height: 577px;
 }
 
 .main-title{
@@ -97,7 +99,6 @@ ol > li{
 article{
     display: flex;
     flex-direction: column;
-    height: 577px;
 }
 
 .rectangle{
@@ -193,10 +194,8 @@ btn-primary:hover {
 .kakao_ad{
     width: 320px;
     margin: 0 auto;
-    height: 300px;
-    /* height: 816px; */
-    justify-content: center;
-    /* margin-top: 400px;    */
+    height: 134px;
+    transform: translateY(30px);
 }
 
 #img{
